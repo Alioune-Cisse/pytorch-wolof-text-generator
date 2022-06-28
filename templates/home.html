@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+		<link rel="shortcut icon" type="image/png" href="static\blue.ico"/>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Alioune</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#">Kocc Barma Fall</a>
+				</div>
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="{{ url_for('home') }}">LSTM</a></li>
+				  <li ><a href="{{ url_for('transform') }}">Transformer</a></li>
+				  <li ><a href="{{ url_for('araf') }}">Dictionnaires</a></li>
+				  <li><a href="{{ url_for('about') }}">A propos</a></li>
+				</ul>
+			  </div>
+			</nav>
+		</header>
+
+		<h1 class="model">"modèle" bii mooy bu ñu defaree ak "LSTM"</h1>
+
+			<form name="google"  action="{{ url_for('research') }}" method="POST">
+			  <div class="form-group col-md-8">
+				<label for="search">Duggel lal li nga bëgë yaatal</label>
+				<input type="text" class="form-control" id="search" name="search" placeholder="Duggel lal li nga bëgë yaatal">
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="size">Lim bi</label>
+				<input type="number" class="form-control" id="size" name="size" value="100">
+			  </div>
+				<div class="form-group col-md-2">
+					<label for="submit">Caytou</label><br>
+			  	<button type="submit" class="btn btn-info" id="submit" name="submit">Seet <span class="glyphicon glyphicon-search"></span></button>
+				</div>
+
+				<textarea class="form-control" rows="10" readonly style="text-align:left">
+					{{ data }}
+				</textarea>
+
+			</form>
+	</body>
+</html>
+

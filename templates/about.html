@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+		<link rel="shortcut icon" type="image/png" href="static\blue.ico"/>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Alioune</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="w3-black" id="about">
+
+<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#">Kocc Barma Fall</a>
+				</div>
+				<ul class="nav navbar-nav">
+				  <li><a href="{{ url_for('home') }}">LSTM</a></li>
+				  <li ><a href="{{ url_for('transform') }}">Transformer</a></li>
+				  <li ><a href="{{ url_for('araf') }}">Dictionnaires</a></li>
+				  <li  class="active"><a href="{{ url_for('about') }}">A propos</a></li>
+				</ul>
+			  </div>
+			</nav>
+		</header>
+
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><!--span class="w3-hide-small">I'm</span-->Alioune CISSE</h1>
+    <p>Junior Data Scientist and AI Engineer</p>
+    <img src="static/mask2.jpg" alt="boy" class="w3-image" width="992" height="1108">
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">Alioune CISSE</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+      Alioune est étudiant en master 2 en science des données et applications à l'université
+      de Thiès (Sénégal) et en master 1 en IA à l'université virtuelle du sénégal.
+      Passionné de l'informatique et des mathématiques, Aliou s'épanouit dans son travail
+      et n'a pas attendu d'avoir des diplômes pour bien maitriser les sciences de données et
+      l'IA qui sont aujourd'hui des domaines indispensables du fait de l'utilisation quotidienne de données massives.
+    </p>
+
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey">Contactez moi</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.4297637683588!2d-17.32484167086071!3d14.784848196057615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10b92f32b7ff7%3A0x10090189ee8a1b90!2sPharmacie%20S%20Moustapha%20SY!5e0!3m2!1sfr!2ssn!4v1629282560700!5m2!1sfr!2ssn" width="600" height="450" style="border:0; float: right; height: 250px;" allowfullscreen="" loading="lazy"></iframe>
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Keur Massar P.A.U 10, SN</p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Téléphone: +221 78 306 80 16</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i>Email : aliou9719@outlook.com</p>
+      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i>https://github.com/Alioune-Cisse/</p>
+      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i>https://www.linkedin.com/in/alioune-cisse-a811a416b/</p>
+    </div><br><br>
+    <p>Entrons en contact. Envoyez-moi un message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nom" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Objet" required name="Subject"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> ENVOYER MESSAGE
+        </button>
+      </p>
+    </form>
+  <!-- End Contact Section -->
+  </div>
+
+
+</div>
+</body>
+</html>

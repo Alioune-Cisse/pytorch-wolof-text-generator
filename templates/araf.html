@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+		<link rel="shortcut icon" type="image/png" href="static\blue.ico"/>
+		  <meta charset="utf-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>Alioune</title>
+		<script src="{{url_for('static', filename='js/script.js')}}"></script>
+	</head>
+	<body id="bodyaraf">
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="#">Kocc Barma Fall</a>
+				</div>
+				<ul class="nav navbar-nav">
+				  <li ><a href="{{ url_for('home') }}">LSTM</a></li>
+				  <li ><a href="{{ url_for('transform') }}">Transformer</a></li>
+				  <li class="active"><a href="{{ url_for('araf') }}">Dictionnaires</a></li>
+				  <li ><a href="{{ url_for('about') }}">A propos</a></li>
+				</ul>
+			  </div>
+			</nav>
+		</header>
+	<section class="titredict">
+		{% for i,j in zip(data.keys(), data.values()) %}
+		<span class="araf" style="background-color:{{ np.random.choice(couleurs) }}">{{ i }}</span>
+		{% endfor %}
+		<hr>
+	</section>
+	<section class="dicto">
+		{% for z, i in zip(data.keys(),data.values()) %}
+		<div class="{{ 'arafs ' + z }}" id="{{z}}">
+			{% for j in i %}
+			<span class="{{ 'arafspan ' +j}}"  style="background-color:{{ np.random.choice(couleurs) }}">{{ j }}</span>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</section>
+</body>
+</html>
